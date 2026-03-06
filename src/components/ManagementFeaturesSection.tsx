@@ -5,7 +5,7 @@ const managementFeatures = [
   { icon: "✏️", text: "تعديل القوانين داخل البوت بدون الحاجة لكود" },
   { icon: "📊", text: "عرض قائمة الأعضاء النشطين يوميًا" },
   { icon: "🎛️", text: "لوحة تحكم للمشرفين بالعربية" },
-  { icon: "📝", text: "تسجيل كل الأحداث المهمة في الجروب (انضمام/خروج/تعديل)" },
+  { icon: "📝", text: "تسجيل كل الأحداث المهمة في الجروب" },
   { icon: "🎨", text: "تخصيص ألوان أو رموز للرسائل المثبتة" },
   { icon: "👑", text: "إعداد مستويات مشرفين مختلفة مع صلاحيات متنوعة" },
   { icon: "👁️", text: "إخفاء/إظهار الرسائل المهمة عند الطلب" },
@@ -23,14 +23,19 @@ const managementFeatures = [
 
 export default function ManagementFeaturesSection() {
   return (
-    <section className="py-20 px-6 bg-[#0d1120]">
-      <div className="max-w-6xl mx-auto">
+    <section className="py-24 px-6 relative overflow-hidden">
+      {/* Background */}
+      <div className="absolute inset-0 bg-[#0d1120]" />
+      <div className="absolute inset-0 grid-pattern opacity-20" />
+
+      {/* Glow */}
+      <div className="absolute top-1/2 right-0 w-96 h-96 bg-blue-600/5 rounded-full blur-3xl pointer-events-none" />
+
+      <div className="relative z-10 max-w-6xl mx-auto">
         {/* Section header */}
         <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 bg-blue-500/10 border border-blue-500/30 rounded-full px-4 py-2 mb-6">
-            <span className="text-blue-300 text-sm font-medium">
-              ⚙️ مميزات تنظيمية وإدارية
-            </span>
+          <div className="inline-flex items-center gap-2 bg-blue-500/10 border border-blue-500/20 rounded-full px-4 py-2 mb-6">
+            <span className="text-blue-300 text-sm font-medium">⚙️ مميزات تنظيمية وإدارية</span>
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
             ٢٠ ميزة إدارية متكاملة
@@ -41,16 +46,22 @@ export default function ManagementFeaturesSection() {
         </div>
 
         {/* Features grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
           {managementFeatures.map((feature, index) => (
             <div
               key={index}
-              className="bg-[#1a1f2e] border border-blue-500/20 rounded-2xl p-4 flex items-start gap-3 card-glow"
+              className="group relative bg-[#0d1525] border border-blue-500/10 hover:border-blue-500/30 rounded-2xl p-4 flex items-start gap-3 transition-all duration-300 hover:-translate-y-1 overflow-hidden"
+              style={{ boxShadow: "0 0 0 rgba(59,130,246,0)" }}
             >
-              <span className="text-2xl flex-shrink-0 mt-0.5">
+              {/* Hover glow */}
+              <div className="absolute inset-0 bg-blue-500/0 group-hover:bg-blue-500/5 transition-colors duration-300 rounded-2xl" />
+
+              {/* Icon */}
+              <div className="w-9 h-9 bg-blue-500/10 border border-blue-500/20 rounded-xl flex items-center justify-center text-lg flex-shrink-0 mt-0.5 group-hover:scale-110 transition-transform duration-300">
                 {feature.icon}
-              </span>
-              <p className="text-slate-300 text-sm leading-relaxed">
+              </div>
+
+              <p className="text-slate-400 group-hover:text-slate-300 text-sm leading-relaxed transition-colors duration-300 relative z-10">
                 {feature.text}
               </p>
             </div>

@@ -45,7 +45,7 @@ The template is a clean Next.js 16 starter with TypeScript and Tailwind CSS 4. I
 
 ## Current Focus
 
-Landing page for Telegram Group Management Bot is complete. The page is fully in Arabic with RTL layout, dark theme, and professional design.
+Landing page for Telegram Group Management Bot is complete with a major UI redesign. The page is fully in Arabic with RTL layout, dark theme, and professional design with advanced animations and visual effects.
 
 Features implemented:
 1. تنظيم الدردشة والقوانين (Chat organization & rules)
