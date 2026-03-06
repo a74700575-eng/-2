@@ -1,168 +1,89 @@
 const features = [
   {
-    number: "١",
     emoji: "📋",
-    title: "تنظيم الدردشة والقوانين",
-    description: "تحكم كامل في دردشة جروبك مع نظام قوانين متكامل",
+    title: "تنظيم الدردشة",
     color: "#3b82f6",
-    gradient: "from-blue-500 to-cyan-500",
-    borderColor: "border-blue-500/20",
-    bgGradient: "from-blue-500/10 to-blue-600/5",
     items: [
-      { icon: "🔒", text: "قفل/فتح الدردشة حسب الحاجة" },
-      { icon: "📌", text: "تثبيت رسائل القوانين والإعلانات تلقائيًا" },
-      { icon: "✏️", text: "تعديل رسالة الترحيب والقوانين بسهولة" },
-      { icon: "🔄", text: "ردود تلقائية للأسئلة المتكررة" },
-      { icon: "👥", text: "قبول/رفض أعضاء جدد تلقائيًا حسب الإعدادات" },
+      "قفل/فتح الدردشة حسب الحاجة",
+      "تثبيت رسائل القوانين تلقائيًا",
+      "رسالة ترحيب مخصصة للأعضاء الجدد",
+      "ردود تلقائية للأسئلة المتكررة",
     ],
   },
   {
-    number: "٢",
     emoji: "⚖️",
     title: "إدارة المخالفات",
-    description: "نظام تحذيرات ذكي يحافظ على النظام والانضباط",
     color: "#f97316",
-    gradient: "from-orange-500 to-red-500",
-    borderColor: "border-orange-500/20",
-    bgGradient: "from-orange-500/10 to-orange-600/5",
     items: [
-      { icon: "⚠️", text: "نظام تحذيرات تلقائي لكل مخالفة" },
-      { icon: "🔢", text: "عدد التحذيرات قابل للتخصيص" },
-      { icon: "🚫", text: "الطرد أو التقييد بعد تجاوز التحذيرات" },
-      { icon: "📊", text: "سجل مخالفات لكل عضو مع إشعارات فورية" },
-      { icon: "🎛️", text: "تخصيص صلاحيات لكل مشرف على حدة" },
+      "نظام تحذيرات تلقائي لكل مخالفة",
+      "عدد التحذيرات قابل للتخصيص",
+      "طرد أو تقييد بعد تجاوز الحد",
+      "سجل مخالفات لكل عضو",
     ],
   },
   {
-    number: "٣",
     emoji: "🛡️",
-    title: "حماية الجروب الأساسية",
-    description: "درع حماية متكامل ضد السبام والمحتوى الضار",
+    title: "حماية الجروب",
     color: "#10b981",
-    gradient: "from-green-500 to-teal-500",
-    borderColor: "border-green-500/20",
-    bgGradient: "from-green-500/10 to-green-600/5",
     items: [
-      { icon: "🔗", text: "منع الروابط الغير مرغوبة والإعلانات" },
-      { icon: "🚨", text: "كشف السبام والرسائل المكررة" },
-      { icon: "🤬", text: "فلترة الكلمات المسيئة" },
-      { icon: "📁", text: "حماية الملفات قبل نشرها" },
+      "منع الروابط والإعلانات الغير مرغوبة",
+      "كشف السبام والرسائل المكررة",
+      "فلترة الكلمات المسيئة",
+      "حماية من الفيضان (Flood)",
     ],
   },
   {
-    number: "٤",
-    emoji: "😊",
-    title: "تفاعل بسيط مع الأعضاء",
-    description: "تجربة ممتعة وودودة تجعل الجروب أكثر حيوية",
+    emoji: "🎮",
+    title: "ألعاب وتفاعل",
     color: "#8b5cf6",
-    gradient: "from-purple-500 to-pink-500",
-    borderColor: "border-purple-500/20",
-    bgGradient: "from-purple-500/10 to-purple-600/5",
     items: [
-      { icon: "👋", text: "ردود ودودة عند مناداة البوت باسمه" },
-      { icon: "😄", text: "ردود هزلية خفيفة عند كلمات محددة" },
-      { icon: "🎮", text: "ألعاب صغيرة اختيارية بدون التأثير على التنظيم" },
+      "ألعاب جماعية تنافسية (Trivia، تخمين...)",
+      "ألعاب فردية ترفيهية",
+      "نظام نقاط ولوحة متصدرين",
+      "ردود ودودة وهزلية تلقائية",
     ],
   },
 ];
 
 export default function FeaturesSection() {
   return (
-    <section id="features" className="py-24 px-6 relative">
-      {/* Background */}
-      <div className="absolute inset-0 bg-[#0d1120]" />
-      <div className="absolute inset-0 dot-pattern opacity-30" />
-
-      <div className="relative z-10 max-w-6xl mx-auto">
-        {/* Section header */}
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 bg-purple-500/10 border border-purple-500/20 rounded-full px-4 py-2 mb-6">
-            <span className="text-purple-300 text-sm font-medium">✨ المميزات الكاملة</span>
-          </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+    <section id="features" className="py-20 px-6">
+      <div className="max-w-5xl mx-auto">
+        {/* Header */}
+        <div className="text-center mb-12">
+          <h2 className="text-4xl font-bold text-white mb-3">
             كل ما تحتاجه لإدارة جروبك
           </h2>
-          <p className="text-slate-400 text-lg max-w-2xl mx-auto">
+          <p className="text-slate-400 text-lg">
             أربعة أنظمة متكاملة تعمل معًا لضمان جروب منظم وآمن وممتع
           </p>
         </div>
 
-        {/* Features grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {/* Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
           {features.map((feature, index) => (
             <div
               key={index}
-              className={`relative bg-gradient-to-br ${feature.bgGradient} border ${feature.borderColor} rounded-3xl p-8 overflow-hidden group shine`}
-              style={{
-                boxShadow: `0 0 40px ${feature.color}08`,
-                transition: "all 0.4s ease",
-              }}
+              className="bg-[#0d1525] border border-white/8 hover:border-white/15 rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1"
             >
-              {/* Hover glow */}
-              <div
-                className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none rounded-3xl"
-                style={{ background: `radial-gradient(circle at 30% 30%, ${feature.color}10, transparent 60%)` }}
-              />
-
-              {/* Top accent */}
-              <div
-                className="absolute top-0 left-0 right-0 h-px rounded-t-3xl"
-                style={{ background: `linear-gradient(90deg, transparent, ${feature.color}60, transparent)` }}
-              />
-
-              {/* Feature header */}
-              <div className="flex items-center gap-4 mb-6 relative z-10">
+              <div className="flex items-center gap-3 mb-5">
                 <div
-                  className="w-16 h-16 rounded-2xl flex items-center justify-center text-3xl flex-shrink-0 transition-transform duration-300 group-hover:scale-110"
-                  style={{
-                    background: `${feature.color}15`,
-                    border: `1px solid ${feature.color}30`,
-                    boxShadow: `0 0 20px ${feature.color}20`,
-                  }}
+                  className="w-12 h-12 rounded-xl flex items-center justify-center text-2xl flex-shrink-0"
+                  style={{ background: `${feature.color}15`, border: `1px solid ${feature.color}30` }}
                 >
                   {feature.emoji}
                 </div>
-                <div className="text-right">
-                  <div className="text-xs text-slate-500 mb-1 font-medium">
-                    النظام {feature.number}
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-1">
-                    {feature.title}
-                  </h3>
-                  <p className="text-slate-500 text-sm">{feature.description}</p>
-                </div>
+                <h3 className="text-lg font-bold text-white">{feature.title}</h3>
               </div>
 
-              {/* Divider */}
-              <div
-                className="h-px mb-5 relative z-10"
-                style={{ background: `linear-gradient(90deg, ${feature.color}30, transparent)` }}
-              />
-
-              {/* Feature items */}
-              <ul className="space-y-3 relative z-10">
-                {feature.items.map((item, itemIndex) => (
-                  <li key={itemIndex} className="flex items-center gap-3 group/item">
-                    <div
-                      className="w-8 h-8 rounded-xl flex items-center justify-center text-base flex-shrink-0 transition-transform duration-200 group-hover/item:scale-110"
-                      style={{ background: `${feature.color}10`, border: `1px solid ${feature.color}20` }}
-                    >
-                      {item.icon}
-                    </div>
-                    <span className="text-slate-300 text-sm leading-relaxed">
-                      {item.text}
-                    </span>
+              <ul className="space-y-2.5">
+                {feature.items.map((item, i) => (
+                  <li key={i} className="flex items-center gap-2.5 text-slate-400 text-sm">
+                    <span className="w-1.5 h-1.5 rounded-full flex-shrink-0" style={{ background: feature.color }} />
+                    {item}
                   </li>
                 ))}
               </ul>
-
-              {/* Number watermark */}
-              <div
-                className="absolute bottom-4 left-6 text-8xl font-black opacity-5 select-none pointer-events-none"
-                style={{ color: feature.color }}
-              >
-                {feature.number}
-              </div>
             </div>
           ))}
         </div>
