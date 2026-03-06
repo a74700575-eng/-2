@@ -1,0 +1,15 @@
+{
+  "name": "telegram-group-bot",
+  "version": "1.0.0",
+  "description": "Telegram Group Management Bot",
+  "type": "module",
+  "scripts": {
+    "dev": "bun run index.js",
+    "start": "bun run index.js"
+  },
+  "dependencies": {
+    "grammy": "^1.21.0",
+    "@grammyjs/conversations": "^1.2.0",
+    "@grammyjs/router": "^2.0.0"
+  }
+}
