@@ -2,6 +2,11 @@ import HeroSection from "@/components/HeroSection";
 import FeaturesSection from "@/components/FeaturesSection";
 import CommandsSection from "@/components/CommandsSection";
 import StatsSection from "@/components/StatsSection";
+import ManagementFeaturesSection from "@/components/ManagementFeaturesSection";
+import GroupGamesSection from "@/components/GroupGamesSection";
+import SoloGamesSection from "@/components/SoloGamesSection";
+import UIFeaturesSection from "@/components/UIFeaturesSection";
+import InteractiveFeaturesSection from "@/components/InteractiveFeaturesSection";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -10,6 +15,11 @@ export default function Home() {
       <HeroSection />
       <StatsSection />
       <FeaturesSection />
+      <ManagementFeaturesSection />
+      <GroupGamesSection />
+      <SoloGamesSection />
+      <UIFeaturesSection />
+      <InteractiveFeaturesSection />
       <CommandsSection />
       <Footer />
     </main>
