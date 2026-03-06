@@ -1,6 +1,7 @@
 import HeroSection from "@/components/HeroSection";
 import FeaturesSection from "@/components/FeaturesSection";
 import CommandsSection from "@/components/CommandsSection";
+import TokenSection from "@/components/TokenSection";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -9,6 +10,7 @@ export default function Home() {
       <HeroSection />
       <FeaturesSection />
       <CommandsSection />
+      <TokenSection />
       <Footer />
     </main>
   );
